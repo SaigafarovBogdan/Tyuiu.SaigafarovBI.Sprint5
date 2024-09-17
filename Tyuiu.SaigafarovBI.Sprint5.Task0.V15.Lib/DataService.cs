@@ -6,8 +6,8 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task0.V15.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = @"C:\Users\User\source\repos\Tyuiu.SaigafarovBI.Sprint5\OutPutFileTask0.txt";
-            double res = Math.Round(x/(Math.Pow(x,3)+2), 3);
+            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            double res = Math.Round(x/(Math.Pow(x,3)+2), 2);
             File.WriteAllText(path,Convert.ToString(res));
             return path;
         }
