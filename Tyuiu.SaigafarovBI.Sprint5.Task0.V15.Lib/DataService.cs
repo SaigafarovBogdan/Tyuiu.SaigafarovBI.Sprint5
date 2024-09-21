@@ -10,7 +10,6 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task0.V15.Lib
             string path = Path.Combine(paths);
             double res = Math.Round(x/(Math.Pow(x,3)+2), 3);
             File.WriteAllText(path,Convert.ToString(res));
-            Console.WriteLine(path);
             return path;
         }
     }
