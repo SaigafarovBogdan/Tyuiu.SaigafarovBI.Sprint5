@@ -6,7 +6,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task1.V20.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string[] paths = { Directory.GetCurrentDirectory(), "OutPutFileTask1.txt" };
+            string[] paths = { Path.GetTempPath(), Path.GetTempFileName() };
             string path = Path.Combine(paths);
             FileInfo fileInfo = new FileInfo(path);
             if(fileInfo.Exists)
