@@ -8,7 +8,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task0.V15.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = @"C:\Users\User\source\repos\Tyuiu.SaigafarovBI.Sprint5\OutPutFileTask0.txt";
+            string path = @"C:\Users\User\AppData\Local\Temp\tmp5ahsi0.tmp";
             FileInfo file = new FileInfo(path);
             Assert.AreEqual(true, file.Exists);
 
