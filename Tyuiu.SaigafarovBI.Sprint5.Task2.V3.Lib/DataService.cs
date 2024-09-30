@@ -15,6 +15,8 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task2.V3.Lib
             }
             int rows = matrix.GetLength(0);
             int columns = matrix.GetLength(1);
+
+
             for(int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
@@ -22,13 +24,24 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task2.V3.Lib
                     if (matrix[i, j] % 2 != 0) matrix[i, j] = 0;
                 }
             }
+
             string str = "";
+
             for (int i = 0;i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    str += j != columns - 1 ? str + matrix[i, j] + ";":str + matrix[i, j];
+                    if (j != columns - 1)
+                    {
+                        str += matrix[i, j] + ";";
+                    }
+                    else
+                    {
+                        str += matrix[i, j];
+                    }
                 }
+
+
                 if (i != rows - 1)
                 {
                     File.AppendAllText(path, str + Environment.NewLine);
