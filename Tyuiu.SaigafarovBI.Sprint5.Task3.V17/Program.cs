@@ -22,16 +22,6 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task3.V17
             Console.WriteLine("Файл: "+ res);
             Console.WriteLine("Создан!");
 
-
-            string content = "SDNsSA2KgDNJ5ShAJN3DNA6SJ"; string newContent = "";
-            foreach (char c in content)
-            {
-                if (!char.IsUpper(c))
-                {
-                    newContent += c;
-                }
-            }
-            Console.WriteLine(String.Join("\n", newContent));
             Console.ReadKey();
         }
     }

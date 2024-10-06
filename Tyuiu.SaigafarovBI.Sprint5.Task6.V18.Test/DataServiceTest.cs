@@ -9,12 +9,12 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task6.V18.Test
         public void ValidCalc()
         {
             DataService dataService = new DataService();
-            Assert.AreEqual(10,dataService.LoadFromDataFile(Path.Combine(Path.GetTempPath(), Path.GetTempFileName())));
+            Assert.AreEqual(3,dataService.LoadFromDataFile(Path.Combine(@"C:\DataSprint5", "InPutDataFileTask6V18.txt")));
         }
         [TestMethod]
         public void CheckedExistsFile()
         {
-            Assert.AreEqual(true, File.Exists(Path.Combine(Path.GetTempPath(), Path.GetTempFileName())));
+            Assert.AreEqual(true, File.Exists(Path.Combine(@"C:\DataSprint5", "InPutDataFileTask6V18.txt")));
         }
     }
 }
