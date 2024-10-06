@@ -1,6 +1,6 @@
-﻿using Tyuiu.SaigafarovBI.Sprint5.Task6.V18.Lib;
+﻿using Tyuiu.SaigafarovBI.Sprint5.Task7.V26.Lib;
 
-namespace Tyuiu.SaigafarovBI.Sprint5.Task6.V18
+namespace Tyuiu.SaigafarovBI.Sprint5.Task7.V26
 {
     internal class Program
     {
@@ -10,7 +10,8 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task6.V18
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            string path = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask6V18.txt");
+
+            string path = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask7V26.txt");
             Console.WriteLine("Данные находятся в файле: " + path);
 
 
@@ -18,8 +19,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task6.V18
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine(dataService.LoadFromDataFile(path));
-
+            Console.WriteLine(dataService.LoadDataAndSave(path));
 
             Console.ReadKey();
         }
