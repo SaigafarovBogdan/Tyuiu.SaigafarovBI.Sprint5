@@ -12,9 +12,14 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task6.V18.Lib
                 string? line;
                 while((line = sr.ReadLine()) != null)
                 {
-                    for(int i  = 0; i < line.Length; i++)
+                    bool newNumber = true;
+                    for (int i  = 0; i < line.Length; i++)
                     {
-                        bool newNumber = true;
+                        if (!char.IsDigit(line[i]))
+                        {
+                            newNumber = true;
+                            continue;
+                        }
                         if (i == line.Length - 1) if (char.IsDigit(line[i]) && newNumber)
                         {
                                 count++;
@@ -23,7 +28,6 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task6.V18.Lib
 
                         if (char.IsDigit(line[i]) && !char.IsDigit(line[i + 1]) && newNumber)
                         {
-                            newNumber = true;
                             count++;
                         }
                         else newNumber = false;
