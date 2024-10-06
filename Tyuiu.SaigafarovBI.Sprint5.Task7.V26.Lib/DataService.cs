@@ -14,7 +14,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task7.V26.Lib
 
             using (StreamReader sr = new StreamReader(path))
             {
-                string line;
+                string? line;
 
                 char[] letters = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
 
