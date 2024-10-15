@@ -1,6 +1,6 @@
-﻿using Tyuiu.SaigafarovBI.Sprint5.Task4.V24.Lib;
+﻿using Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib;
 
-namespace Tyuiu.SaigafarovBI.Sprint5.Task4.V24
+namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22
 {
 	internal class Program
 	{
@@ -20,7 +20,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task4.V24
 			Console.WriteLine("***************************************************************************");
 			double res = dataService.LoadFromDataFile(path);
 
-			Console.WriteLine(res);
+			Console.WriteLine("Минимальный элемент кратный 4: "+ res);
 			Console.ReadKey();
 		}
 	}
