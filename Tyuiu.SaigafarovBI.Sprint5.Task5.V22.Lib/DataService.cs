@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Globalization;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib
 {
@@ -12,8 +13,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib
 				string? line;
 				while ((line = sr.ReadLine()) != null)
 				{
-					line = line.Replace('.', ',');
-					double number = Convert.ToDouble(line);
+					double number = double.Parse(line,CultureInfo.InvariantCulture);
 					if (number % 4.0 == 0 && number < min)
 					{
 						min = Convert.ToDouble(line);
