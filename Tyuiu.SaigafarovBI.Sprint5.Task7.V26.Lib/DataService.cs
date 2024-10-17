@@ -16,7 +16,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task7.V26.Lib
             {
                 string? line;
 
-                char[] letters = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
+                char[] letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
 
                 while ((line = sr.ReadLine()) != null)
                 {
