@@ -6,7 +6,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task7.V26.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathSave = Path.Combine(@"C:\DataSprint5", "outPutDataFileTask7V26.txt");
+            string pathSave = Path.Combine(Path.GetTempPath(), "outPutDataFileTask7V26.txt");
 
             if (File.Exists(pathSave)) File.Delete(pathSave);
 

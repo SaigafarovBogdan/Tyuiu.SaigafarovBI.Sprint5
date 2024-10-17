@@ -1,4 +1,5 @@
 ﻿using Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib;
+using System.Globalization;
 
 namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22
 {
@@ -20,7 +21,13 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22
 			Console.WriteLine("***************************************************************************");
 			double res = dataService.LoadFromDataFile(path);
 
-			Console.WriteLine("Минимальный элемент кратный 4: "+ res);
+			Console.WriteLine("Минимальный элемент кратный 4: " + res);
+			NumberFormatInfo info = new NumberFormatInfo()
+			{
+				NumberDecimalSeparator = "."
+			};
+			double x = double.Parse(Console.ReadLine(), info);
+			Console.WriteLine(x);
 			Console.ReadKey();
 		}
 	}
