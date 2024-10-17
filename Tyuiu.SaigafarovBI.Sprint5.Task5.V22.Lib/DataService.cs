@@ -16,7 +16,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib
 					double number = double.Parse(line,CultureInfo.InvariantCulture);
 					if (number % 4.0 == 0 && number < min)
 					{
-						min = Convert.ToDouble(line);
+						min = number;
 					}
 				}
 			}

@@ -11,8 +11,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22
 			Console.WriteLine("***************************************************************************");
 			Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 			Console.WriteLine("***************************************************************************");
-			string[] paths = { Path.GetTempPath(), Path.GetTempFileName() };
-			string path = Path.Combine(paths);
+			string path = @"C:\DataSprint5\InPutDataFileTask5V22.txt";
 			Console.WriteLine("Данные находятся в файле: " + path);
 
 
@@ -22,12 +21,6 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22
 			double res = dataService.LoadFromDataFile(path);
 
 			Console.WriteLine("Минимальный элемент кратный 4: " + res);
-			NumberFormatInfo info = new NumberFormatInfo()
-			{
-				NumberDecimalSeparator = "."
-			};
-			double x = double.Parse(Console.ReadLine(), info);
-			Console.WriteLine(x);
 			Console.ReadKey();
 		}
 	}
