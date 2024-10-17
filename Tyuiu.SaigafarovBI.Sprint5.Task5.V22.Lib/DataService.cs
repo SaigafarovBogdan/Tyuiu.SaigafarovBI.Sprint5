@@ -12,6 +12,7 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib
 				string? line;
 				while ((line = sr.ReadLine()) != null)
 				{
+					line = line.Replace('.', ',');
 					double number = Convert.ToDouble(line);
 					if (number % 4.0 == 0 && number < min)
 					{
