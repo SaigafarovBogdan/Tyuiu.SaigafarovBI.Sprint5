@@ -13,10 +13,14 @@ namespace Tyuiu.SaigafarovBI.Sprint5.Task5.V22.Lib
 				string? line;
 				while ((line = sr.ReadLine()) != null)
 				{
-					double number = double.Parse(line,CultureInfo.InvariantCulture);
-					if (number % 4.0 == 0 && number < min)
+					string[] numbers = line.Split(' ');
+					foreach(string number in numbers)
 					{
-						min = number;
+						double number_ = double.Parse(number, CultureInfo.InvariantCulture);
+						if (number_ % 4.0 == 0 && number_ < min)
+						{
+							min = number_;
+						}
 					}
 				}
 			}
